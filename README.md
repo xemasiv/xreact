@@ -1,6 +1,17 @@
 # xreact
 React boilerplate
 
+## Todo
+
+- Webpack
+- React
+- Babel
+- Express
+- React Router
+- Server-side Rendering
+- Material UI Next
+- React Helmet
+
 ## License
 
 Attribution 4.0 International (CC BY 4.0)
