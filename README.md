@@ -1,16 +1,22 @@
 # xreact
 React boilerplate
 
-## Todo
+#### Installed
+> https://medium.freecodecamp.org/part-1-react-app-from-scratch-using-webpack-4-562b1d231e75
 
-- Webpack
-- React
-- Babel
-- Express
-- React Router
-- Server-side Rendering
-- Material UI Next
-- React Helmet
+* Webpack
+* Babel
+* React
+* HTML Webpack Plugin
+* Webpack Dev Server
+
+
+## Todo
+* Express
+* React Router
+* Server-side Rendering
+* Material UI Next
+* React Helmet
 
 ## License
 
