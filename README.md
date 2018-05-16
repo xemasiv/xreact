@@ -18,7 +18,6 @@ React boilerplate
   * Firefox: >= 45
   * Chrome: >= 49
   * Safari: >= 10
-
 ## Todo
 * Express
 * Server-side Rendering

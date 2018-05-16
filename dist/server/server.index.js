@@ -1,1 +1,141 @@
-!function(e){var t={};function r(n){if(t[n])return t[n].exports;var o=t[n]={i:n,l:!1,exports:{}};return e[n].call(o.exports,o,o.exports,r),o.l=!0,o.exports}r.m=e,r.c=t,r.d=function(e,t,n){r.o(e,t)||Object.defineProperty(e,t,{configurable:!1,enumerable:!0,get:n})},r.r=function(e){Object.defineProperty(e,"__esModule",{value:!0})},r.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return r.d(t,"a",t),t},r.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},r.p="",r(r.s=14)}([function(e,t){e.exports=require("@material-ui/core/styles")},function(e,t){e.exports=require("react")},function(e,t){e.exports=require("recompose")},function(e,t){e.exports=require("@material-ui/core/Typography")},function(e,t){e.exports=require("@material-ui/core/Button")},function(e,t,r){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=function(){function e(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(t,r,n){return r&&e(t.prototype,r),n&&e(t,n),t}}(),o=c(r(1)),i=c(r(4)),u=c(r(3)),a=r(0),s=r(2);function c(e){return e&&e.__esModule?e:{default:e}}var l=function(e){function t(){return function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,t),function(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}(this,(t.__proto__||Object.getPrototypeOf(t)).apply(this,arguments))}return function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}(t,o.default.Component),n(t,[{key:"render",value:function(){return o.default.createElement("div",null,o.default.createElement(u.default,{variant:"display2",gutterBottom:!0},"Hello world"),o.default.createElement(i.default,{variant:"raised",color:"primary"},"Hello World"))}}]),t}();t.default=(0,s.compose)((0,a.withTheme)())(l)},function(e,t){e.exports=require("@material-ui/core/colors")},function(e,t){e.exports=require("react-jss/lib/JssProvider")},function(e,t){e.exports=require("react-jss/lib/jss")},function(e,t){e.exports=require("react-dom/server")},function(e,t){e.exports=require("serialize-javascript")},function(e,t){e.exports=require("compression")},function(e,t){e.exports=require("cors")},function(e,t){e.exports=require("express")},function(e,t,r){"use strict";var n=d(r(13)),o=d(r(1)),i=d(r(12)),u=d(r(11)),a=d(r(10)),s=r(9),c=r(8),l=d(r(7)),f=r(0),p=(r(6),d(r(5)));function d(e){return e&&e.__esModule?e:{default:e}}var y=(0,n.default)();y.disable("x-powered-by"),y.use((0,i.default)()),y.use((0,u.default)()),y.use(n.default.static("dist/browser"));var m=(0,f.createMuiTheme)({palette:{type:"light"}});y.use(function(e,t){var r={name:"xemasiv"},n=new c.SheetsRegistry,i=(0,f.createGenerateClassName)(),u=(0,s.renderToString)(o.default.createElement(l.default,{registry:n,generateClassName:i},o.default.createElement(f.MuiThemeProvider,{theme:m,sheetsManager:new Map},o.default.createElement(p.default,{data:r})))),d=n.toString();t.send('\n    <!doctype html>\n    <html>\n      <head>\n        <title>xreact</title>\n      </head>\n      <body>\n        <div id="root">'+u+'</div>\n        <style id="jss-server-side">'+d+'</style>\n        <script src="/browser.index.js" defer><\/script>\n        <script>window.__DATA__ = '+(0,a.default)(r)+"<\/script>\n      </body>\n    </html>\n  ")}),y.listen(80)}]);
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/server/index.js");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./src/server/index.js":
+/*!*****************************!*\
+  !*** ./src/server/index.js ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nvar _express = __webpack_require__(/*! express */ \"express\");\n\nvar _express2 = _interopRequireDefault(_express);\n\nvar _react = __webpack_require__(/*! react */ \"react\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _cors = __webpack_require__(/*! cors */ \"cors\");\n\nvar _cors2 = _interopRequireDefault(_cors);\n\nvar _compression = __webpack_require__(/*! compression */ \"compression\");\n\nvar _compression2 = _interopRequireDefault(_compression);\n\nvar _serializeJavascript = __webpack_require__(/*! serialize-javascript */ \"serialize-javascript\");\n\nvar _serializeJavascript2 = _interopRequireDefault(_serializeJavascript);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar app = (0, _express2.default)();\napp.disable('x-powered-by');\napp.use((0, _cors2.default)());\napp.use((0, _compression2.default)());\napp.use(_express2.default.static('dist/browser'));\n\napp.use('*', function (req, res) {\n  var data = { name: 'xemasiv' };\n  res.status(200).send('\\n    <!doctype html>\\n    <html>\\n      <head>\\n        <title>xreact</title>\\n      </head>\\n      <body>\\n        <div id=\"root\"></div>\\n        <script src=\"/browser.index.js\" defer></script>\\n        <script>window.__DATA__ = ' + (0, _serializeJavascript2.default)(data) + '</script>\\n      </body>\\n    </html>\\n  ');\n});\n\napp.listen(80);\n/*\r\nimport { renderToString } from 'react-dom/server';\r\nimport { SheetsRegistry } from 'react-jss/lib/jss';\r\nimport JssProvider from 'react-jss/lib/JssProvider';\r\nimport { MuiThemeProvider, createMuiTheme, createGenerateClassName } from '@material-ui/core/styles';\r\nimport { green, red } from '@material-ui/core/colors';\r\nimport App from '../App.js';\r\nconst theme = createMuiTheme({ palette: { type: 'light' } });\r\napp.use('/asdasd', (req, res) => {\r\n  const data = { name: 'xemasiv' };\r\n  const sheetsRegistry = new SheetsRegistry();\r\n  const generateClassName = createGenerateClassName();\r\n  const html = renderToString(\r\n    <JssProvider registry={sheetsRegistry} generateClassName={generateClassName}>\r\n      <MuiThemeProvider theme={theme} sheetsManager={new Map()}>\r\n        <App data={data}/>\r\n      </MuiThemeProvider>\r\n    </JssProvider>\r\n  );\r\n  const css = sheetsRegistry.toString();\r\n  res.send(`\r\n    <!doctype html>\r\n    <html>\r\n      <head>\r\n        <title>xreact</title>\r\n      </head>\r\n      <body>\r\n        <div id=\"root\">${html}</div>\r\n        <style id=\"jss-server-side\">${css}</style>\r\n        <script src=\"/browser.index.js\" defer></script>\r\n        <script>window.__DATA__ = ${serialize(data)}</script>\r\n      </body>\r\n    </html>\r\n  `);\r\n});*/\n\n//# sourceURL=webpack:///./src/server/index.js?");
+
+/***/ }),
+
+/***/ "compression":
+/*!******************************!*\
+  !*** external "compression" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"compression\");\n\n//# sourceURL=webpack:///external_%22compression%22?");
+
+/***/ }),
+
+/***/ "cors":
+/*!***********************!*\
+  !*** external "cors" ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"cors\");\n\n//# sourceURL=webpack:///external_%22cors%22?");
+
+/***/ }),
+
+/***/ "express":
+/*!**************************!*\
+  !*** external "express" ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"express\");\n\n//# sourceURL=webpack:///external_%22express%22?");
+
+/***/ }),
+
+/***/ "react":
+/*!************************!*\
+  !*** external "react" ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"react\");\n\n//# sourceURL=webpack:///external_%22react%22?");
+
+/***/ }),
+
+/***/ "serialize-javascript":
+/*!***************************************!*\
+  !*** external "serialize-javascript" ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"serialize-javascript\");\n\n//# sourceURL=webpack:///external_%22serialize-javascript%22?");
+
+/***/ })
+
+/******/ });
