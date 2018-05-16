@@ -1,6 +1,7 @@
 import express from 'express';
 import React from 'react';
 import cors from 'cors';
+import compression from 'compression';
 import serialize from 'serialize-javascript';
 import { renderToString } from 'react-dom/server';
 import { SheetsRegistry } from 'react-jss/lib/jss';
@@ -11,15 +12,15 @@ import { green, red } from '@material-ui/core/colors';
 import App from '../App.js';
 
 const app = express();
+app.disable('x-powered-by');
 app.use(cors());
+app.use(compression());
 app.use(express.static('dist/browser'));
+const theme = createMuiTheme({ palette: { type: 'light' } });
 app.use((req, res) => {
+  const data = { name: 'xemasiv' };
   const sheetsRegistry = new SheetsRegistry();
-  const theme = createMuiTheme({ palette: { type: 'light' } });
   const generateClassName = createGenerateClassName();
-  const data = {
-    name: 'xemasiv'
-  };
   const html = renderToString(
     <JssProvider registry={sheetsRegistry} generateClassName={generateClassName}>
       <MuiThemeProvider theme={theme} sheetsManager={new Map()}>
@@ -32,7 +33,7 @@ app.use((req, res) => {
     <!doctype html>
     <html>
       <head>
-        <title>Material-UI</title>
+        <title>xreact</title>
       </head>
       <body>
         <div id="root">${html}</div>

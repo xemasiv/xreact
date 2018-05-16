@@ -15,7 +15,7 @@ class App extends React.Component {
           Hello World
         </Button>
       </div>
-    )
+    );
   }
 };
 /*

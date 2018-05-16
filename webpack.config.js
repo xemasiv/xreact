@@ -56,24 +56,7 @@ const browser = {
   module: {
     rules: [
       { test: /\.(js)$/, use: 'babel-loader', exclude: /node_modules/ },
-      {
-        test: /\.css$/,
-        use: [
-          {
-            loader: 'style-loader'
-          },
-          {
-            loader: 'css-loader',
-            options: {
-              modules: true,
-              importLoaders: 1,
-              localIdentName: '[name]_[local]_[hash:base64]',
-              sourceMap: true,
-              minimize: true
-            }
-          }
-        ]
-      }
+      { test: /\.css$/, use: ['style-loader', 'css-loader'] }
     ]
   },
   plugins: [
@@ -93,7 +76,8 @@ const server = {
   },
   module: {
     rules: [
-      { test: /\.(js)$/, use: 'babel-loader', exclude: /node_modules/ }
+      { test: /\.(js)$/, use: 'babel-loader', exclude: /node_modules/ },
+      { test: /\.css$/, use: ['style-loader', 'css-loader'] }
     ]
   },
   plugins: [
