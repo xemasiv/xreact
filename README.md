@@ -2,20 +2,26 @@
 React boilerplate
 
 #### Installed
-> https://medium.freecodecamp.org/part-1-react-app-from-scratch-using-webpack-4-562b1d231e75
-
-* Webpack
-* Babel
-* React
-* HTML Webpack Plugin
-* Webpack Dev Server
-
+* https://medium.freecodecamp.org/part-1-react-app-from-scratch-using-webpack-4-562b1d231e75
+  * Webpack
+  * Babel
+  * React
+  * HTML Webpack Plugin
+  * Webpack Dev Server
+* https://reacttraining.com/react-router/web/example/basic
+  * React Router Dom
+* https://material-ui-next.com/getting-started/installation/
+  * `yarn add @material-ui/core`
+  * `yarn add @material-ui/icons`
+  * IE: 11
+  * Edge: >= 14
+  * Firefox: >= 45
+  * Chrome: >= 49
+  * Safari: >= 10
 
 ## Todo
 * Express
-* React Router
 * Server-side Rendering
-* Material UI Next
 * React Helmet
 
 ## License
