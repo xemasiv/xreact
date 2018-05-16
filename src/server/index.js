@@ -17,6 +17,7 @@ app.use('*', (req, res) => {
     <html>
       <head>
         <title>xreact</title>
+        <link rel="stylesheet" href="/fonts/roboto.css">
       </head>
       <body>
         <div id="root"></div>
