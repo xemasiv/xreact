@@ -1,11 +1,24 @@
 import React from 'react';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import ReactDOM from 'react-dom';
+import Loadable from 'react-loadable';
+
+const Loading = () => {
+  return <CircularProgress color="secondary"/>;
+};
 
 import Header from './partials/Header';
-import Home from './pages/Home';
-import NotFound from './pages/NotFound';
+const Home = Loadable({
+  loader: () => import('./pages/Home'),
+  loading: () => <Loading/>,
+})
+const NotFound = Loadable({
+  loader: () => import('./pages/NotFound'),
+  loading: () => <Loading/>,
+});
+
 
 import { Provider } from './State';
 

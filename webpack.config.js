@@ -3,10 +3,12 @@ const webpack = require('webpack');
 const NodeExternals = require('webpack-node-externals');
 
 const browser = {
-  entry: ['whatwg-fetch', './src/index.js'],
+  entry: [
+    'whatwg-fetch', './src/index.js'
+  ],
   output: {
     path: __dirname + '/dist/browser',
-    filename: 'browser.index.js',
+    filename: '[name].index.js',
   },
   module: {
     rules: [
@@ -18,7 +20,19 @@ const browser = {
     new webpack.DefinePlugin({
       __isBrowser__: "true"
     })
-  ]
+  ],
+  /*
+  optimization: {
+    splitChunks: {
+    	cacheGroups: {
+    		commons: {
+    			name: "commons",
+    			chunks: "initial",
+    			minChunks: 2
+    		}
+    	}
+    }
+  } */
 };
 
 const server = {

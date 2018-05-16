@@ -3,14 +3,25 @@ import React from 'react';
 import cors from 'cors';
 import compression from 'compression';
 import serialize from 'serialize-javascript';
+import session from 'express-session';
 
 const app = express();
 app.disable('x-powered-by');
 app.use(cors());
-app.use(compression());
-app.use(express.static('dist/browser'));
+app.use(compression({ level: 9 }));
+
+app.use(session({
+  secret: 'Bjq3DojKaYvj',
+  resave: false,
+  saveUninitialized: false,
+  cookie: { secure: false }
+}));
+app.use(express.static('dist/browser', {
+  maxage: 43200000
+}));
 
 app.use('*', (req, res) => {
+  console.log('session:', req.session);
   const data = { name: 'xemasiv' };
   res.status(200).send(`
     <!doctype html>
@@ -21,7 +32,7 @@ app.use('*', (req, res) => {
       </head>
       <body>
         <div id="root"></div>
-        <script src="/browser.index.js" defer></script>
+        <script src="/main.index.js" defer></script>
         <script>window.__DATA__ = ${serialize(data)}</script>
       </body>
     </html>

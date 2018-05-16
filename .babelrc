@@ -17,6 +17,7 @@
     "react"
   ],
   "plugins": [
+    "babel-plugin-syntax-dynamic-import",
     "transform-object-rest-spread"
   ]
 }
